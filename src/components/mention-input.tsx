@@ -126,14 +126,14 @@ const MentionInput: FC<MentionInputProps> = (
 
   return (
     <View style={containerStyle}>
-      {(partTypes
+{/*       {(partTypes
         .filter(one => (
           isMentionPartType(one)
           && one.renderSuggestions != null
           && !one.isBottomMentionSuggestionsRender
         )) as MentionPartType[])
         .map(renderMentionSuggestions)
-      }
+      } */}
 
       <TextInput
         multiline
@@ -144,7 +144,8 @@ const MentionInput: FC<MentionInputProps> = (
 
         onChangeText={onChangeInput}
         onSelectionChange={handleSelectionChange}
-      >
+        />
+{/*       >
         <Text>
           {parts.map(({text, partType, data}, index) => partType ? (
             <Text
@@ -157,16 +158,16 @@ const MentionInput: FC<MentionInputProps> = (
             <Text key={index}>{text}</Text>
           ))}
         </Text>
-      </TextInput>
+      </TextInput> */}
 
-      {(partTypes
+{/*       {(partTypes
         .filter(one => (
           isMentionPartType(one)
           && one.renderSuggestions != null
           && one.isBottomMentionSuggestionsRender
         )) as MentionPartType[])
         .map(renderMentionSuggestions)
-      }
+      } */}
     </View>
   );
 };
